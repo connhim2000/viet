@@ -1,0 +1,338 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title>Goodnetwork Tour Service</title>
+	<link rel="stylesheet" href="Css/StyleSheet.css" type="text/css" charset="utf-8" />
+	<STYLE type="text/css">
+		H1.myclass {border-width: 1; border: solid; text-align: center}
+		#myid {border-width: 1; border: solid; text-align: center}
+		#header-text {text-align: right; font-size: x-small; vertical-align: bottom; color: rgb(4, 83, 168); font-weight: bolder; font-family: Times New Roman;}
+		#foorter-text {text-align: right; font-size: x-small; vertical-align: top; color: rgb(4, 83, 168); font-weight: bolder; font-family: Times New Roman; }
+	</STYLE>
+</head>
+<body>
+<form id="form1" runat="server">
+<center>
+<div>
+<table width="1025" height="1131" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td rowspan="12">
+			<img src="Images/left_fill.png" width="137" height="1280" alt=""></td>
+		<td colspan="1">
+			<img src="Images/logo.png" alt=""></td>
+		<td colspan="4" id="header-text">
+			ADD:#407,Hwaseong Bd, 234-5,Guui-1dong,Gwangjingu,Seoul,Republic of Korea</td>
+		<td rowspan="12">
+			<img src="Images/right_fill.png" width="118" height="1280" alt=""></td>
+		<td>
+			<img src="Images/spacer.gif" width="1" height="82" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="5">
+		    <table class="table">
+                <tr>
+                    <td>
+                        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="menu">TRANG CHỦ</asp:LinkButton></td>
+                    <td>
+                        <img src="Images/spar.gif" />
+                    </td>
+                    <td>
+                        <asp:LinkButton ID="LinkButton2" runat="server" CssClass="menu">GIỚI THIỆU</asp:LinkButton></td>
+                    <td>
+                        <img src="Images/spar.gif" />
+                    </td>
+                    <td>
+                        <asp:LinkButton ID="LinkButton3" runat="server" CssClass="menu">TOUR TRỌN GÓI</asp:LinkButton></td>
+                    <td>
+                        <img src="Images/spar.gif" />
+                    </td>
+                    <td>
+                        <asp:LinkButton ID="LinkButton4" runat="server" CssClass="menu">TOUR TỰ CHỌN</asp:LinkButton></td>
+                    <td>
+                        <img src="Images/spar.gif" />
+                    </td>
+                    <td>
+                        <asp:LinkButton ID="LinkButton5" runat="server" CssClass="menu">ĐỊA ĐIỂM DU LỊCH</asp:LinkButton></td>
+                    <td>
+                        <img src="Images/spar.gif" />
+                    </td>
+                    <td>
+                        <asp:LinkButton ID="LinkButton6" runat="server" CssClass="menu">KHÁCH SẠN</asp:LinkButton></td>
+                    <td>
+                        <img src="Images/spar.gif" />
+                    </td>
+                    <td>
+                        <asp:LinkButton ID="LinkButton7" runat="server" CssClass="menu">SỰ KIỆN</asp:LinkButton></td>
+                    <td>
+                        <img src="Images/spar.gif" />
+                    </td>
+                    <td>
+                        <asp:LinkButton ID="LinkButton8" runat="server" CssClass="menu">ĐẶT TOUR</asp:LinkButton></td>
+                    <td>
+                        <img src="Images/spar.gif" />
+                    </td>
+                    <td>
+                        <asp:LinkButton ID="LinkButton9" runat="server" CssClass="menu">LIÊN HỆ</asp:LinkButton></td>
+                </tr>
+            </table>
+        </td>
+		<td>
+			<img src="Images/spacer.gif" width="1" height="36" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="5"  background="Images/banner.png" STYLE="background-repeat: no-repeat; " height="330px" />
+		<td>
+			<img src="Images/spacer.gif" width="1" height="422" alt=""></td>
+	</tr>
+	<tr height="35px;">
+		<td colspan="3"  background="Images/khuyen_mai.png" STYLE="background-repeat: no-repeat; " />
+		<td colspan="3"  background="Images/gioi_thieu_cty.png" STYLE="background-repeat: no-repeat; " />
+	</tr>
+	<tr>
+		<td colspan="3" rowspan="3">
+			<table class="table_tour">
+                <tr >
+                    <td width="158px" align="left" >
+                        <asp:LinkButton ID="LinkButton10" runat="server" CssClass="tour_header">SEOUL – EVERLAND – NAMI – DMZ</asp:LinkButton>
+                    </td>
+                    <td width="158px" align="left" >
+                        <asp:Label ID="Label2" runat="server" Text="SEOUL – NAMI SOKCHO – EVERLAND – SUNWON – TIGER WORLD" 
+                            CssClass="tour_header"></asp:Label>
+                    </td>
+                    <td width="158px" align="left" >
+                        <asp:Label ID="Label3" runat="server" Text="SEOUL – JEJU – EVERLAND – DMZ" 
+                            CssClass="tour_header"></asp:Label>
+                    </td>
+                    <td width="158px" align="left" >
+                        <asp:Label ID="Label4" runat="server" Text="SEOUL – EVERLAND – NAMI – DMZ" 
+                            CssClass="tour_header"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="158px">
+                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/km_1.jpg" CssClass="img_km" />
+                        <br />
+                        <div class="tour_content" padding:"7px;" >Miễn phí cho trẻ em dưới 2 tuổi ăn ngủ chung với bố mẹ, từ 2 đến 10 tuổi 50% giá tour 75% giá vé máy bay ăn suất riêng và ...</div>
+                        <div style="text-align:right; padding-top: 7px;"><asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
+                    </td>
+                    <td width="158px">
+                        <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Images/km_2.jpg" CssClass="img_km" />
+                        <br />
+                        <div class="tour_content" padding:"7px;" >Miễn phí cho trẻ em dưới 2 tuổi ăn ngủ chung với bố mẹ, từ 2 đến 10 tuổi 50% giá tour 75% giá vé máy bay ăn suất riêng và ...</div>
+                        <div style="text-align:right; padding-top: 7px;" ><asp:ImageButton ID="ImageButton6" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
+                    </td>
+                    <td width="158px">
+                        <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/Images/km_3.jpg" CssClass="img_km" />
+                        <br />
+                        <div class="tour_content"  padding:"7px;" >Miễn phí cho trẻ em dưới 2 tuổi ăn ngủ chung với bố mẹ, từ 2 đến 10 tuổi 50% giá tour 75% giá vé máy bay ăn suất riêng và ...</div>
+                        <div style="text-align:right; padding-top: 7px;" ><asp:ImageButton ID="ImageButton7" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
+                    </td>
+                    <td width="158px">
+                        <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/Images/km_4.jpg" CssClass="img_km" />
+                        <br />
+                        <div class="tour_content"  padding:"7px;" >Miễn phí cho trẻ em dưới 2 tuổi ăn ngủ chung với bố mẹ, từ 2 đến 10 tuổi 50% giá tour 75% giá vé máy bay ăn suất riêng và ...</div>
+                        <div style="text-align:right; padding-top: 7px;"><asp:ImageButton ID="ImageButton8" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+		<td rowspan="5"  background="Images/line.png" STYLE="background-repeat: repeat-y;" />
+		<td>
+			<div class="info">
+                Xin chào các bạn đến với chúng tôi. Tôi là Julie, giám đốc công ty GTS.
+                <br />Công ty chúng tôi thành lập vào năm 2002 và được đổi tên vào năm 2009. Tên công ty có nghĩa là “Dịch vụ du lịch tốt”.
+                <br />Chúng tôi hợp tác với các công ty du lịch quốc tế để cung cấp nhiều dịch vụ du lịch khác nhau cho khách hàng bao gồm …
+            </div>
+            <div style="text-align:right"><asp:ImageButton ID="ImageButton18" runat="server" ImageUrl="~/Images/btn_doctiep.gif" /></div>
+        </td>
+		<td>
+			<img src="Images/spacer.gif" width="1" height="142" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="Images/index-copy_10.gif" width="288" height="37" alt=""></td>
+		<td>
+			<img src="Images/spacer.gif" width="1" height="37" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="3">
+			<table class="table_tour_cre">
+                <tr>
+                    <td class="style1">
+                        <asp:Label ID="Label8" runat="server" Text="Điểm đến" CssClass="lbl_tour_cre"></asp:Label></td>
+                    <td>
+                        <asp:TextBox ID="TextBox1" runat="server" Width="150" BackColor="#B9DCFF"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td class="style1">
+                        <asp:Label ID="Label9" runat="server" Text="Ngày khởi hành" CssClass="lbl_tour_cre"></asp:Label></td>
+                    <td>
+                        <asp:TextBox ID="TextBox2" runat="server" Width="150" BackColor="#B9DCFF" Text="DD/MM/YYYY" CssClass="txt_tour_cre"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td class="style1">
+                        <asp:Label ID="Label10" runat="server" Text="Ngày trở về" CssClass="lbl_tour_cre"></asp:Label></td>
+                    <td>
+                        <asp:TextBox ID="TextBox3" runat="server" Width="150" BackColor="#B9DCFF" Text="DD/MM/YYYY" CssClass="txt_tour_cre"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td class="style1">
+                        <asp:Label ID="Label11" runat="server" Text="Khách sạn" CssClass="lbl_tour_cre"></asp:Label></td>
+                    <td valign="middle">
+                        <asp:TextBox ID="TextBox4" runat="server" Width="125" BackColor="#B9DCFF"></asp:TextBox>
+                        <asp:Label ID="Label18" runat="server" Text="sao" CssClass="lbl_tour_cre"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style1">
+                        <asp:Label ID="Label12" runat="server" Text="Người lớn" CssClass="lbl_tour_cre"></asp:Label></td>
+                    <td>
+                        <asp:TextBox ID="TextBox5" runat="server" Width="40" BackColor="#B9DCFF"></asp:TextBox>
+                        &nbsp;&nbsp;<asp:Label ID="Label19" runat="server" Text="Trẻ em" CssClass="lbl_tour_cre"></asp:Label>&nbsp;&nbsp;
+                        <asp:TextBox ID="TextBox6" runat="server" Width="40" BackColor="#B9DCFF"></asp:TextBox>
+                        </td>
+                </tr>
+                <tr>
+                    <td class="style1">
+                        <asp:Label ID="Label13" runat="server" Text="Tên khách" CssClass="lbl_tour_cre"></asp:Label></td>
+                    <td>
+                        <asp:TextBox ID="TextBox7" runat="server" Width="150" BackColor="#B9DCFF"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td class="style1">
+                        <asp:Label ID="Label14" runat="server" Text="Điện thoại" CssClass="lbl_tour_cre"></asp:Label></td>
+                    <td>
+                        <asp:TextBox ID="TextBox8" runat="server" Width="150" BackColor="#B9DCFF"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td class="style1">
+                        <asp:Label ID="Label15" runat="server" Text="Địa chỉ" CssClass="lbl_tour_cre"></asp:Label></td>
+                    <td>
+                        <asp:TextBox ID="TextBox9" runat="server" Width="150" BackColor="#B9DCFF"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td class="style1">
+                        <asp:Label ID="Label16" runat="server" Text="Hướng dẫn viên" CssClass="lbl_tour_cre"></asp:Label></td>
+                    <td>
+                        <asp:TextBox ID="TextBox10" runat="server" Width="150" BackColor="#B9DCFF"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td class="style1">
+                        <asp:Label ID="Label17" runat="server" Text="Xe" CssClass="lbl_tour_cre"></asp:Label></td>
+                    <td>
+                        <asp:TextBox ID="TextBox11" runat="server" Width="90" BackColor="#B9DCFF"></asp:TextBox>
+                        <asp:Label ID="Label20" runat="server" Text="chỗ ngồi" CssClass="lbl_tour_cre"></asp:Label>                   
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style1">
+                        </td>
+                    <td>
+                         <div style="text-align:right"><asp:ImageButton ID="ImageButton17" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>              
+                    </td>
+                </tr>
+            </table>
+			</td>
+		<td>
+			<img src="Images/spacer.gif" width="1" height="69" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<img src="Images/index-copy_12.gif" width="652" height="34" alt=""></td>
+		<td>
+			<img src="Images/spacer.gif" width="1" height="34" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<table class="table_nb">
+                <tr>
+                    <td>
+                     <asp:ImageButton ID="ImageButton9" runat="server" ImageUrl="~/Images/nb_1.jpg" CssClass="img_nb" />
+                        </td>
+                    <td>
+                        <asp:Label ID="Label1" runat="server" Text="SEOUL – JEJU – EVERLAND – DMZ" 
+                            CssClass="tour_header"></asp:Label>
+                        <br />
+                        <div class="tour_content">Ngày1: Đến sân bay quốc tế Incheon. Quý khách lên xe khởi hành vào Seoul dùng bữa sáng với thực đơn là các món mỳ ...</div>
+                        <div style="text-align:right"><asp:ImageButton ID="ImageButton13" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
+                        </td>
+                    <td>
+                    <asp:ImageButton ID="ImageButton10" runat="server" ImageUrl="~/Images/nb_1_bot.jpg" CssClass="img_nb" />
+                        </td>
+                    <td>
+                        <asp:Label ID="Label5" runat="server" Text="SEOUL – JEJU – EVERLAND – DMZ" 
+                            CssClass="tour_header"></asp:Label>
+                        <br />
+                        <div class="tour_content">Ngày1: Đến sân bay quốc tế Incheon. Quý khách lên xe khởi hành vào Seoul dùng bữa sáng với thực đơn là các món mỳ ...</div>
+                        <div style="text-align:right"><asp:ImageButton ID="ImageButton14" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
+                        </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ImageButton ID="ImageButton11" runat="server" ImageUrl="~/Images/nb_2.jpg" CssClass="img_nb" />
+                    </td>
+                    <td>
+                        <asp:Label ID="Label6" runat="server" Text="SEOUL – NAMI SOKCHO – EVERLAND – SUNWON – TIGER WORLD" 
+                            CssClass="tour_header"></asp:Label>
+                        <br />
+                        <div class="tour_content">Ngày1: Đến sân bay quốc tế Incheon. Quý khách lên xe khởi hành vào Seoul dùng bữa sáng với thực đơn là các món mỳ ...</div>
+                        <div style="text-align:right"><asp:ImageButton ID="ImageButton15" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
+                        </td>
+                    <td>
+                    <asp:ImageButton ID="ImageButton12" runat="server" ImageUrl="~/Images/nb_2_bot.jpg" CssClass="img_nb" />
+                    </td>
+                    <td>
+                        <asp:Label ID="Label7" runat="server" Text="SEOUL – JEJU – EVERLAND – DMZ" CssClass="tour_header"></asp:Label>
+                        <br />
+                        <div class="tour_content">Ngày1: Đến sân bay quốc tế Incheon. Quý khách lên xe khởi hành vào Seoul dùng bữa sáng với thực đơn là các món mỳ ...</div>
+                        <div style="text-align:right"><asp:ImageButton ID="ImageButton16" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
+                    </td>
+                </tr>
+            </table>
+			</td>
+		<td>
+			<img src="Images/spacer.gif" width="1" height="221" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="6" height="15px;" />
+	</tr>
+	<tr>
+		<td colspan="5"  background="Images/line.png" STYLE="background-repeat: repeat-x; " />
+		<td><img src="Images/spacer.gif" width="1" height="15" alt=""></td>
+	</tr>
+	<tr >
+		<td colspan="1" style="vertical-align:top; " >
+			<img src="Images/logo.png" height="36" alt=""></td>
+		<td colspan="4" id="foorter-text" >
+			ADD:#407,Hwaseong Bd,234-5,Guui-1dong,Gwangjingu,Seoul,Republic of Korea<br />
+			TEL:070-7636-6626      E-mail:hengao@empas.com  <br />
+			COPYRIGHT(C) 2011 GTS ALL RIGHTS RESERVED</td>
+		<td>
+			<img src="Images/spacer.gif" width="1" height="72" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="Images/spacer.gif" width="28" height="1" alt=""></td>
+		<td>
+			<img src="Images/spacer.gif" width="586" height="1" alt=""></td>
+		<td>
+			<img src="Images/spacer.gif" width="25" height="1" alt=""></td>
+		<td>
+			<img src="Images/spacer.gif" width="41" height="1" alt=""></td>
+		<td>
+			<img src="Images/spacer.gif" width="23" height="1" alt=""></td>
+		<td>
+			<img src="Images/spacer.gif" width="288" height="1" alt=""></td>
+		<td>
+			<img src="Images/spacer.gif" width="33" height="1" alt=""></td>
+		<td></td>
+	</tr>
+</table>
+</div>
+</center>
+</form>
+</body>
+</html>
