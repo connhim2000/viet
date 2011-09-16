@@ -1,0 +1,11 @@
+#summary Introduction to the General Data Design
+[http://code.google.com/ http://code.google.com/images/code_sm.png]
+
+= GeneralDataDesign =
+
+This is a general simple data design for typical system.
+
+
+= Details =
+
+http://viet.googlecode.com/svn/wiki/images/GeneralDataDesign.PNG
