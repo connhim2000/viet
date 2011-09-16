@@ -8,4 +8,4 @@ This just an initial sample of Wiki page using.
 
 = Details =
 
-https://viet.googlecode.com/svn/wiki/images/devprocess.PNG
+http://viet.googlecode.com/svn/wiki/images/devprocess.PNG
