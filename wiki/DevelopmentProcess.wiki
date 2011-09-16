@@ -1,0 +1,11 @@
+#summary Introduction to the Development process
+[http://code.google.com/ http://code.google.com/images/code_sm.png]
+
+= DevelopmentProcess =
+
+This just an initial sample of Wiki page using.
+
+
+= Details =
+
+https://viet.googlecode.com/svn/wiki/images/devprocess.PNG
