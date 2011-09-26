@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <%@ Register Src="UserControls/banner.ascx" TagName="banner" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/header.ascx" TagName="header" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/footer.ascx" TagName="footer" TagPrefix="uc3" %>
@@ -12,6 +13,8 @@
 </head>
 <body class="master_body">
     <form id="form1" runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
     <div align="center">
     <table width="1024px" bgcolor="#73AFDD" border="0" cellpadding="0" cellspacing="0">
         <tr>
@@ -23,51 +26,52 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <table class="table">
+                        <td class="tbl_master_td">
+                            <table class="tbl_menu"">
                                 <tr>
                                     <td>
-                                        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="menu">TRANG CHỦ</asp:LinkButton></td>
+                                        <asp:LinkButton ID="LinkButton1" runat="server"
+                                            PostBackUrl="~/Default.aspx">TRANG CHỦ</asp:LinkButton></td>
                                     <td>
-                                        <img src="Images/spar.gif" />
+                                        <img src="Images/spar.jpg" />
                                     </td>
                                     <td>
-                                        <asp:LinkButton ID="LinkButton2" runat="server" CssClass="menu">GIỚI THIỆU</asp:LinkButton></td>
+                                        <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/GioiThieu.aspx">GIỚI THIỆU</asp:LinkButton></td>
                                     <td>
-                                        <img src="Images/spar.gif" />
+                                        <img src="Images/spar.jpg" />
                                     </td>
                                     <td>
-                                        <asp:LinkButton ID="LinkButton3" runat="server" CssClass="menu">TOUR TRỌN GÓI</asp:LinkButton></td>
+                                        <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="TourTronGoi.aspx">TOUR TRỌN GÓI</asp:LinkButton></td>
                                     <td>
-                                        <img src="Images/spar.gif" />
+                                        <img src="Images/spar.jpg" />
                                     </td>
                                     <td>
-                                        <asp:LinkButton ID="LinkButton4" runat="server" CssClass="menu">TOUR TỰ CHỌN</asp:LinkButton></td>
+                                        <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl="TourTuChon.aspx">TOUR TỰ CHỌN</asp:LinkButton></td>
                                     <td>
-                                        <img src="Images/spar.gif" />
+                                        <img src="Images/spar.jpg" />
                                     </td>
                                     <td>
-                                        <asp:LinkButton ID="LinkButton5" runat="server" CssClass="menu">ĐỊA ĐIỂM DU LỊCH</asp:LinkButton></td>
+                                        <asp:LinkButton ID="LinkButton5" runat="server" PostBackUrl="DiaDiemDuLich.aspx">ĐỊA ĐIỂM DU LỊCH</asp:LinkButton></td>
                                     <td>
-                                        <img src="Images/spar.gif" />
+                                        <img src="Images/spar.jpg" />
                                     </td>
                                     <td>
-                                        <asp:LinkButton ID="LinkButton6" runat="server" CssClass="menu">KHÁCH SẠN</asp:LinkButton></td>
+                                        <asp:LinkButton ID="LinkButton6" runat="server" PostBackUrl="KhachSan.aspx">KHÁCH SẠN</asp:LinkButton></td>
                                     <td>
-                                        <img src="Images/spar.gif" />
+                                        <img src="Images/spar.jpg" />
                                     </td>
                                     <td>
-                                        <asp:LinkButton ID="LinkButton7" runat="server" CssClass="menu">SỰ KIỆN</asp:LinkButton></td>
+                                        <asp:LinkButton ID="LinkButton7" runat="server" PostBackUrl="SuKien.aspx">SỰ KIỆN</asp:LinkButton></td>
                                     <td>
-                                        <img src="Images/spar.gif" />
+                                        <img src="Images/spar.jpg" />
                                     </td>
                                     <td>
-                                        <asp:LinkButton ID="LinkButton8" runat="server" CssClass="menu">ĐẶT TOUR</asp:LinkButton></td>
+                                        <asp:LinkButton ID="LinkButton8" runat="server" PostBackUrl="~/DatTour.aspx">ĐẶT TOUR</asp:LinkButton></td>
                                     <td>
-                                        <img src="Images/spar.gif" />
+                                        <img src="Images/spar.jpg" />
                                     </td>
                                     <td>
-                                        <asp:LinkButton ID="LinkButton9" runat="server" CssClass="menu">LIÊN HỆ</asp:LinkButton></td>
+                                        <asp:LinkButton ID="LinkButton9" runat="server" PostBackUrl="~/LienHe.aspx">LIÊN HỆ</asp:LinkButton></td>
                                 </tr>
                             </table>
                         </td>
@@ -94,6 +98,63 @@
         </tr>
     </table>
     </div>
+    <!--popup menu 
+    <asp:HoverMenuExtender ID="hme2" runat="Server"
+    TargetControlID="LinkButton3"
+    PopupControlID="PopupMenu"
+    PopupPosition="Bottom"
+    OffsetX="-14"
+    OffsetY="0"
+    PopDelay="50">
+    </asp:HoverMenuExtender>
+    <table runat="server" id="PopupMenu" class="tbl_popup_menu">
+        <tr>
+            <td>
+                Provincial Tour
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Drama Tour
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ski Tour
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Sport Tour
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Theme Tour
+            </td>
+        </tr>
+        <tr>
+            <td>
+                VIP Tour
+            </td>
+        </tr>
+        <tr>
+            <td>
+                DMZ& Panmunjeom Tour
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Special Tour
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ski Tour
+            </td>
+        </tr>
+    </table>
+    -->
     </form>
 </body>
 </html>
