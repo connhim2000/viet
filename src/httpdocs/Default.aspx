@@ -64,32 +64,32 @@
             </div>
             <div style="text-align:right"><asp:ImageButton ID="ImageButton18" runat="server" ImageUrl="~/Images/btn_doctiep.gif" /></div>
             <br />
-            <div align="left"><img src="Images/site/dattour.jpg" alt="tour khuyen mai" /></div>
+            <div align="left"><img src="Images/site/dattour.jpg" alt="dat tour" /></div>
             <br />
             <table class="table_tour_cre">
                 <tr>
                     <td class="style1">
                         <asp:Label ID="Label8" runat="server" Text="Điểm đến" CssClass="lbl_tour_cre"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="TextBox1" runat="server" Width="150" BackColor="#B9DCFF"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBox1" runat="server" Width="150" CssClass="textbox"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td class="style1">
                         <asp:Label ID="Label9" runat="server" Text="Ngày khởi hành" CssClass="lbl_tour_cre"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="TextBox2" runat="server" Width="150" BackColor="#B9DCFF" Text="DD/MM/YYYY" CssClass="txt_tour_cre"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBox2" runat="server" Width="150" Text="DD/MM/YYYY" CssClass="textbox"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td class="style1">
                         <asp:Label ID="Label10" runat="server" Text="Ngày trở về" CssClass="lbl_tour_cre"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="TextBox3" runat="server" Width="150" BackColor="#B9DCFF" Text="DD/MM/YYYY" CssClass="txt_tour_cre"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBox3" runat="server" Width="150" Text="DD/MM/YYYY" CssClass="textbox"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td class="style1">
                         <asp:Label ID="Label11" runat="server" Text="Khách sạn" CssClass="lbl_tour_cre"></asp:Label></td>
                     <td valign="middle">
-                        <asp:TextBox ID="TextBox4" runat="server" Width="125" BackColor="#B9DCFF"></asp:TextBox>
+                        <asp:TextBox ID="TextBox4" runat="server" Width="125" CssClass="textbox"></asp:TextBox>
                         <asp:Label ID="Label18" runat="server" Text="sao" CssClass="lbl_tour_cre"></asp:Label>
                     </td>
                 </tr>
@@ -97,40 +97,40 @@
                     <td class="style1">
                         <asp:Label ID="Label12" runat="server" Text="Người lớn" CssClass="lbl_tour_cre"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="TextBox5" runat="server" Width="40" BackColor="#B9DCFF"></asp:TextBox>
+                        <asp:TextBox ID="TextBox5" runat="server" Width="40" CssClass="textbox"></asp:TextBox>
                         &nbsp;&nbsp;<asp:Label ID="Label19" runat="server" Text="Trẻ em" CssClass="lbl_tour_cre"></asp:Label>&nbsp;&nbsp;
-                        <asp:TextBox ID="TextBox6" runat="server" Width="40" BackColor="#B9DCFF"></asp:TextBox>
+                        <asp:TextBox ID="TextBox6" runat="server" Width="40" CssClass="textbox"></asp:TextBox>
                         </td>
                 </tr>
                 <tr>
                     <td class="style1">
                         <asp:Label ID="Label13" runat="server" Text="Tên khách" CssClass="lbl_tour_cre"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="TextBox7" runat="server" Width="150" BackColor="#B9DCFF"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBox7" runat="server" Width="150" CssClass="textbox"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td class="style1">
                         <asp:Label ID="Label14" runat="server" Text="Điện thoại" CssClass="lbl_tour_cre"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="TextBox8" runat="server" Width="150" BackColor="#B9DCFF"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBox8" runat="server" Width="150" CssClass="textbox"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td class="style1">
                         <asp:Label ID="Label15" runat="server" Text="Địa chỉ" CssClass="lbl_tour_cre"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="TextBox9" runat="server" Width="150" BackColor="#B9DCFF"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBox9" runat="server" Width="150" CssClass="textbox"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td class="style1">
                         <asp:Label ID="Label16" runat="server" Text="Hướng dẫn viên" CssClass="lbl_tour_cre"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="TextBox10" runat="server" Width="150" BackColor="#B9DCFF"></asp:TextBox></td>
+                        <asp:TextBox ID="TextBox10" runat="server" Width="150" CssClass="textbox"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td class="style1">
                         <asp:Label ID="Label17" runat="server" Text="Xe" CssClass="lbl_tour_cre"></asp:Label></td>
                     <td>
-                        <asp:TextBox ID="TextBox11" runat="server" Width="90" BackColor="#B9DCFF"></asp:TextBox>
+                        <asp:TextBox ID="TextBox11" runat="server" Width="90" CssClass="textbox"></asp:TextBox>
                         <asp:Label ID="Label20" runat="server" Text="chỗ ngồi" CssClass="lbl_tour_cre"></asp:Label>                   
                     </td>
                 </tr>

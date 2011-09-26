@@ -31,6 +31,49 @@
 {
     width: 969px;
 }
+/*menu*/
+a
+{
+    text-decoration:none;
+}
+.menu
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #0453a8;
+    font-weight:bold;
+    text-decoration: none;
+}
+.tbl_menu
+{
+    width:100%; 
+    height:30px;
+    text-align:center;
+    padding-top:3px;
+    border-spacing:0px;
+}
+.tbl_menu td
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #0453a8;
+    font-weight:bold;
+    text-decoration: none;
+    vertical-align:bottom;
+}
+.tbl_menu td:hover
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background-color: #4f88b3;
+    color:#ffffff;
+    font-weight:bold;
+    text-decoration: none;
+}
+.tbl_menu td a:hover
+{
+    color:#ffffff;
+}
 /*body*/
 body
 {
@@ -39,6 +82,14 @@ body
     topmargin: 0;
     marginwidth :0;
     marginheight :0;
+}
+.textbox
+{
+    text-align:center;
+    font-style:italic;
+    font-size:12px;
+    color:#0453a8;
+    background-color: #d3deec;
 }
 .table
 {
@@ -68,22 +119,6 @@ body
     width: 100%;
     text-align:left;
 }
-.menu
-{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    color: #0453a8;
-    font-weight:bold;
-    text-decoration: none;
-}
-.menu:hover
-{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    color: #3391f6;
-    font-weight:bold;
-    text-decoration: none;
-}
 .tour_header
 {
     font-family: Arial, Helvetica, sans-serif;
@@ -110,6 +145,7 @@ body
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-left: 10px;
+	text-decoration: none;
 }
 .lbl_tour_cre
 {
@@ -117,6 +153,7 @@ body
     font-size:12px;
     font-weight:bold;
     color: #0453a8;
+    text-decoration:none;
 }
 .style1
 {
@@ -125,10 +162,7 @@ body
 }
 .txt_tour_cre
 {
-    text-align:center;
-    font-style:italic;
-    font-size:12px;
-    color:#0453a8;
+    
 }
 .info
 {
@@ -145,6 +179,56 @@ body
 }
 .img_nb
 {
-     height: 85px;
-     width: 85px;
+    height: 85px;
+    width: 85px;
+}
+.tbl_tour_list
+{
+    border-spacing:0px;
+    border-color:#ffffff;
+    width: 170px;
+    background-color:#cbe2f3;
+    padding-top:10px;
+    padding-bottom:45px;
+}
+.tbl_tour_list td
+{
+    height: 35px;
+    padding-left:30px;
+    padding-right:20px;
+}
+.tbl_tour_list td:hover
+{
+    background-color: #ffffff;
+}
+.tbl_tour_list_selected
+{
+    background-color: #ffffff;
+}
+/*effect*/
+.tbl_popup_menu
+{
+    border-spacing:0px;
+}
+.tbl_popup_menu td
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight:bold;
+    height: 40px;
+    text-decoration: none;
+    vertical-align:bottom;
+    /*opacity*/
+    background-color: #708dc2;
+    opacity: 0.3; /*for firefox*/
+    filter: alpha(opacity=30); /*for ie*/
+}
+.tbl_popup_menu td:hover
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background-color: #4f88b3;
+    color:#ffffff;
+    font-weight:bold;
+    text-decoration: none;
 }
