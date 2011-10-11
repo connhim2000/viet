@@ -1,0 +1,5 @@
+D:\Work\viet.googlecode\trunk\src\httpdocs\gtsvn\bin\gtsvn.dll
+D:\Work\viet.googlecode\trunk\src\httpdocs\gtsvn\bin\gtsvn.pdb
+D:\Work\viet.googlecode\trunk\src\httpdocs\gtsvn\obj\Debug\ResolveAssemblyReference.cache
+D:\Work\viet.googlecode\trunk\src\httpdocs\gtsvn\obj\Debug\gtsvn.dll
+D:\Work\viet.googlecode\trunk\src\httpdocs\gtsvn\obj\Debug\gtsvn.pdb

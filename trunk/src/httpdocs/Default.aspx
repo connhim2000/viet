@@ -1,61 +1,54 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Default" %>
+<%@ Register Assembly="CollectionPager" Namespace="SiteUtils" TagPrefix="cc1" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-<br />
+    <br />
 <table class="tbl_child" border="0" cellpadding="0" cellspacing="0">
     <tr>
         <td>
             <div align="left"><img src="Images/site/tour_khuyen_mai.jpg" alt="tour khuyen mai" /></div>
             <table class="table_tour">
-                <tr >
-                    <td width="158px" align="left" >
-                        <asp:LinkButton ID="LinkButton10" runat="server" CssClass="tour_header">SEOUL – EVERLAND – NAMI – DMZ</asp:LinkButton>
-                    </td>
-                    <td width="158px" align="left" >
-                        <asp:Label ID="Label2" runat="server" Text="SEOUL – NAMI SOKCHO – EVERLAND – SUNWON – TIGER WORLD" 
-                            CssClass="tour_header"></asp:Label>
-                    </td>
-                    <td width="158px" align="left" >
-                        <asp:Label ID="Label3" runat="server" Text="SEOUL – JEJU – EVERLAND – DMZ" 
-                            CssClass="tour_header"></asp:Label>
-                    </td>
-                    <td width="158px" align="left" >
-                        <asp:Label ID="Label4" runat="server" Text="SEOUL – EVERLAND – NAMI – DMZ" 
-                            CssClass="tour_header"></asp:Label>
-                    </td>
-                </tr>
                 <tr>
-                    <td width="158px">
-                        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/km_1.jpg" CssClass="img_km" />
-                        <br />
-                        <div class="tour_content" padding:"7px;" >Miễn phí cho trẻ em dưới 2 tuổi ăn ngủ chung với bố mẹ, từ 2 đến 10 tuổi 50% giá tour 75% giá vé máy bay ăn suất riêng và ...</div>
-                        <div style="text-align:right; padding-top: 7px;"><asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
-                    </td>
-                    <td width="158px">
-                        <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Images/km_2.jpg" CssClass="img_km" />
-                        <br />
-                        <div class="tour_content" padding:"7px;" >Miễn phí cho trẻ em dưới 2 tuổi ăn ngủ chung với bố mẹ, từ 2 đến 10 tuổi 50% giá tour 75% giá vé máy bay ăn suất riêng và ...</div>
-                        <div style="text-align:right; padding-top: 7px;" ><asp:ImageButton ID="ImageButton6" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
-                    </td>
-                    <td width="158px">
-                        <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/Images/km_3.jpg" CssClass="img_km" />
-                        <br />
-                        <div class="tour_content"  padding:"7px;" >Miễn phí cho trẻ em dưới 2 tuổi ăn ngủ chung với bố mẹ, từ 2 đến 10 tuổi 50% giá tour 75% giá vé máy bay ăn suất riêng và ...</div>
-                        <div style="text-align:right; padding-top: 7px;" ><asp:ImageButton ID="ImageButton7" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
-                    </td>
-                    <td width="158px">
-                        <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/Images/km_4.jpg" CssClass="img_km" />
-                        <br />
-                        <div class="tour_content"  padding:"7px;" >Miễn phí cho trẻ em dưới 2 tuổi ăn ngủ chung với bố mẹ, từ 2 đến 10 tuổi 50% giá tour 75% giá vé máy bay ăn suất riêng và ...</div>
-                        <div style="text-align:right; padding-top: 7px;"><asp:ImageButton ID="ImageButton8" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
-                    </td>
+                    <asp:Repeater ID="RepPromotion" runat="server">
+                    <ItemTemplate>
+                        <td width="150px">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td height="50px">
+                                        <a href='ChiTietTour.aspx?TourId=<%# Eval("TourId")%>' class="tour_header"><%# Eval("TourNm")%></a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <a href='ChiTietTour.aspx?TourId=<%# Eval("TourId")%>'>
+                                    <img class="img_km" src='Images/site/TourImgs/<%# Eval("PicPath1") %>' border="0" align="middle" />
+                            </a>
+                            <br />
+                            <div class="tour_content" padding="5px" ><%# Eval("DescReview")%></div>
+                            <div style="text-align:right; padding-top: 7px;width: 145px; padding-right:5px"><asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
+                        </td>
+                    </ItemTemplate>
+                    </asp:Repeater>
                 </tr>
             </table>
+            <div style="width:650px" align="right">
+                <cc1:CollectionPager ID="CollectionPager1"
+                    FirstText="Đầu" 
+                    BackText="« Trước &amp;nbsp;" 
+                    LabelText="" 
+                    LastText="Cuối" 
+                    NextText="&amp;nbsp; Sau »" 
+                    ShowFirstLast="True" 
+                    SliderSize="5" PagingMode="PostBack"
+                    runat="server" BackNextLinkSeparator="" BackNextLocation="Split" 
+                    PageNumbersDisplay="Numbers" ResultsLocation="None" 
+                    BackNextDisplay="HyperLinks" ControlCssClass="tour_content_paging">
+                </cc1:CollectionPager>
+            </div>
         </td>
-        <td rowspan="2">
-            <img src="Images/site/ver_line.jpg" alt="tour khuyen mai" />
+        <td rowspan="2" style="padding-right:8px">
+            <img src="Images/site/ver_line.jpg" alt="" />
         </td>
-        <td rowspan="2">
-            <div align="left"><img src="Images/site/gioithieu.jpg" alt="tour khuyen mai" /></div>
+        <td rowspan="2" style="width:270px">
+            <div align="left"><img src="Images/site/gioithieu.jpg" alt="" /></div>
             <br />
             <div class="info">
                 Xin chào các bạn đến với chúng tôi. Tôi là Julie, giám đốc công ty GTS.
@@ -147,51 +140,39 @@
     <tr>
         <td>
             <div align="left"><img src="Images/site/tour_noi_bat.jpg" alt="tour noi bat" /></div>
-            <table class="table_nb">
+            <asp:DataList ID="dlProminent" runat="server" RepeatColumns="2">
+            <ItemTemplate>
+                <table class="table_nb" cellpadding="0" cellspacing="0">
                 <tr>
                     <td>
-                     <asp:ImageButton ID="ImageButton9" runat="server" ImageUrl="~/Images/nb_1.jpg" CssClass="img_nb" />
-                        </td>
-                    <td>
-                        <asp:Label ID="Label1" runat="server" Text="SEOUL – JEJU – EVERLAND – DMZ" 
-                            CssClass="tour_header"></asp:Label>
-                        <br />
-                        <div class="tour_content">Ngày1: Đến sân bay quốc tế Incheon. Quý khách lên xe khởi hành vào Seoul dùng bữa sáng với thực đơn là các món mỳ ...</div>
-                        <div style="text-align:right"><asp:ImageButton ID="ImageButton13" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
-                        </td>
-                    <td>
-                    <asp:ImageButton ID="ImageButton10" runat="server" ImageUrl="~/Images/nb_1_bot.jpg" CssClass="img_nb" />
-                        </td>
-                    <td>
-                        <asp:Label ID="Label5" runat="server" Text="SEOUL – JEJU – EVERLAND – DMZ" 
-                            CssClass="tour_header"></asp:Label>
-                        <br />
-                        <div class="tour_content">Ngày1: Đến sân bay quốc tế Incheon. Quý khách lên xe khởi hành vào Seoul dùng bữa sáng với thực đơn là các món mỳ ...</div>
-                        <div style="text-align:right"><asp:ImageButton ID="ImageButton14" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
-                        </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:ImageButton ID="ImageButton11" runat="server" ImageUrl="~/Images/nb_2.jpg" CssClass="img_nb" />
+                        <a href='ChiTietTour.aspx?TourId=<%# Eval("TourId")%>'>
+                            <img class="img_nb" src='Images/site/TourImgs/<%# Eval("PicPath1") %>' border="0"/>
+                        </a>
                     </td>
                     <td>
-                        <asp:Label ID="Label6" runat="server" Text="SEOUL – NAMI SOKCHO – EVERLAND – SUNWON – TIGER WORLD" 
-                            CssClass="tour_header"></asp:Label>
+                        <a href='ChiTietTour.aspx?TourId=<%# Eval("TourId")%>' class="tour_header"><%# Eval("TourNm")%></a>
                         <br />
-                        <div class="tour_content">Ngày1: Đến sân bay quốc tế Incheon. Quý khách lên xe khởi hành vào Seoul dùng bữa sáng với thực đơn là các món mỳ ...</div>
-                        <div style="text-align:right"><asp:ImageButton ID="ImageButton15" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
-                        </td>
-                    <td>
-                    <asp:ImageButton ID="ImageButton12" runat="server" ImageUrl="~/Images/nb_2_bot.jpg" CssClass="img_nb" />
-                    </td>
-                    <td>
-                        <asp:Label ID="Label7" runat="server" Text="SEOUL – JEJU – EVERLAND – DMZ" CssClass="tour_header"></asp:Label>
-                        <br />
-                        <div class="tour_content">Ngày1: Đến sân bay quốc tế Incheon. Quý khách lên xe khởi hành vào Seoul dùng bữa sáng với thực đơn là các món mỳ ...</div>
-                        <div style="text-align:right"><asp:ImageButton ID="ImageButton16" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
+                        <div class="tour_content_nb"><%# Eval("DescReview")%></div>
+                        <div style="text-align:right; padding-top: 5px; padding-right:12px"><asp:ImageButton ID="ImageButton13" runat="server" ImageUrl="~/Images/btn_dattour.jpg" /></div>
                     </td>
                 </tr>
-            </table>
+                </table>
+            </ItemTemplate>
+            </asp:DataList>
+            <div style="width:650px" align="right">
+                <cc1:CollectionPager ID="CollectionPager2"
+                    FirstText="Đầu" 
+                    BackText="« Trước &amp;nbsp;" 
+                    LabelText="" 
+                    LastText="Cuối" 
+                    NextText="&amp;nbsp; Sau »" 
+                    ShowFirstLast="True" 
+                    SliderSize="5" PagingMode="PostBack"
+                    runat="server" BackNextLinkSeparator="" BackNextLocation="Split" 
+                    PageNumbersDisplay="Numbers" ResultsLocation="None" 
+                    BackNextDisplay="HyperLinks" ControlCssClass="tour_content_paging">
+                </cc1:CollectionPager>
+            </div>
         </td>
     </tr>
 </table>
