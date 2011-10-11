@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="gtsdb" EntityNamespace="gtsvn" ContextNamespace="gtsvn" Class="GTSdB" BaseType="DbLinq.Data.Linq.DataContext" Provider="MySql" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="baseinfo" Member="BaseInfo">
+    <Type Name="BaseInfo" />
+  </Table>
+  <Table Name="contact" Member="Contact">
+    <Type Name="Contact" />
+  </Table>
+  <Table Name="country" Member="Country">
+    <Type Name="Country" />
+  </Table>
+  <Table Name="event" Member="Event">
+    <Type Name="Event" />
+  </Table>
+  <Table Name="hotel" Member="Hotel">
+    <Type Name="Hotel" />
+  </Table>
+  <Table Name="location" Member="Location">
+    <Type Name="Location" />
+  </Table>
+  <Table Name="pictures" Member="Pictures">
+    <Type Name="Pictures" />
+  </Table>
+  <Table Name="role" Member="Role">
+    <Type Name="Role" />
+  </Table>
+  <Table Name="scenery" Member="Scenery">
+    <Type Name="Scenery" />
+  </Table>
+  <Table Name="tour" Member="Tour">
+    <Type Name="Tour" />
+  </Table>
+  <Table Name="tourgroup" Member="TourGroup">
+    <Type Name="TourGroup" />
+  </Table>
+  <Table Name="tourhotel" Member="TourHotel">
+    <Type Name="TourHotel" />
+  </Table>
+  <Table Name="tourkind" Member="TourKind">
+    <Type Name="TourKind" />
+  </Table>
+  <Table Name="tourreg" Member="TourReG">
+    <Type Name="TourReG" />
+  </Table>
+  <Table Name="tourtourkind" Member="TourTourKind">
+    <Type Name="TourTourKind" />
+  </Table>
+  <Table Name="userrole" Member="UserRole">
+    <Type Name="UserRole" />
+  </Table>
+  <Table Name="users" Member="Users">
+    <Type Name="Users" />
+  </Table>
+</Database>

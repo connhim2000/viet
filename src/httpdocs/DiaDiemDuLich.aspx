@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="DiaDiemDuLich.aspx.cs" Inherits="DiaDiemDuLich" %>
+<%@ Register Assembly="CollectionPager" Namespace="SiteUtils" TagPrefix="cc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <br />
@@ -6,102 +7,56 @@
     <tr style="vertical-align:top">
         <td>
             <table class="tbl_tour_list">
-                <tr class="tbl_tour_list_selected">
-                    <td>
-                        <div><asp:HyperLink ID="HyperLink1" runat="server" CssClass="lbl_tour_cre" NavigateUrl="TourTronGoi.aspx">Seoul</asp:HyperLink></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:HyperLink ID="HyperLink2" runat="server" CssClass="lbl_tour_cre" NavigateUrl="TourTronGoi.aspx">Busan</asp:HyperLink>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:HyperLink ID="HyperLink3" runat="server" CssClass="lbl_tour_cre" NavigateUrl="TourTronGoi.aspx">Jeju</asp:HyperLink>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:HyperLink ID="HyperLink4" runat="server" CssClass="lbl_tour_cre" NavigateUrl="TourTronGoi.aspx">Gyeongju</asp:HyperLink>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:HyperLink ID="HyperLink5" runat="server" CssClass="lbl_tour_cre" NavigateUrl="TourTronGoi.aspx">Gangwon</asp:HyperLink>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:HyperLink ID="HyperLink6" runat="server" CssClass="lbl_tour_cre" NavigateUrl="TourTronGoi.aspx">Others</asp:HyperLink>
-                    </td>
-                </tr>
+                <asp:Repeater ID="RepLoca" runat="server">
+                    <ItemTemplate>
+                        <tr class='<%# Eval("LocaId").ToString() == Request.QueryString["LocaId"] ? "tbl_tour_list_selected" : ""%>' style="cursor: pointer" onclick="DoClick('<%# "DiaDiemDuLich.aspx?LocaId=" + Eval("LocaId")%>');">
+                            <td>
+                                <div class="lbl_tour_cre"><%# Eval("LocaNm") %></div>
+                            </td>
+                        </tr>
+                    </ItemTemplate>
+                </asp:Repeater>
             </table>
         </td>
         <td>
             <table class="table_tour_cre" style="background-image: url('images/site/tourtrongoi_bgimg.png'); background-repeat: no-repeat;padding-top: 20px; padding-left: 30px">
-                <tr>
-                    <td>
-                        <asp:ImageButton ID="ImageButton1" runat="server" 
-                            ImageUrl="~/images/site/TourImgs/tour-tron-goi_1.jpg" Width="91px" 
-                            Height="71px" />
-                    </td>
-                    <td>
-                        <div class="tour_content">
-                            <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/TourTronGoi.aspx" style="text-decoration:none"><b>Icheon Ceramics Village & Korean Folk Village Tour $120,0…</b></asp:HyperLink><br /><br />
-                        Ngày1: Đến sân bay quốc tế Incheon. Quý khách lên xe khởi hành vào Seoul dùng bữa sáng với thực đơn là các món mỳ truyền thống HànQuốc Udong.Xe đưa Quý khách đến Gimpo đáp chuyến bay nội địa ra đảo Jeju...</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <img src="images/site/tourtrongoi_sper.jpg" width="745px" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/images/site/TourImgs/tour-tron-goi_2.jpg" Width="91px" 
-                            Height="71px" />
-                    </td>
-                    <td>
-                        <div class="tour_content">
-                        <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/TourTronGoi.aspx" style="text-decoration:none"><b>World Cultural Heritage Tour $99,000</b></asp:HyperLink><br /><br />
-                        Ngày1: Đến sân bay quốc tế Incheon. Quý khách lên xe khởi hành vào Seoul dùng bữa sáng với thực đơn là các món mỳ truyền thống HànQuốc Udong.Xe đưa Quý khách đến Gimpo đáp chuyến bay nội địa ra đảo Jeju...</div>                        
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <img src="images/site/tourtrongoi_sper.jpg" width="745px" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/images/site/TourImgs/tour-tron-goi_3.jpg" Width="91px" 
-                            Height="71px" />
-                    </td>
-                    <td>
-                        <div class="tour_content">
-                        <asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/TourTronGoi.aspx" style="text-decoration:none"><b>Icheon Ceramics Village & Hot Springs Tour $120,000</b></asp:HyperLink><br /><br />
-                        Ngày 1: Quý khách lên xe khởi hành vào Seoul dùng bữa sáng với thực đơn là món mỳ truyền thống Hàn Quốc Udong. Sau đó, xe đưa Quý khách đi thăm cung điện Hoàng Gia Gyeongbok và bảo tàng dân tộc Quốc gia....
-                        </div>                      
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <img src="images/site/tourtrongoi_sper.jpg" width="745px" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/images/site/TourImgs/tour-tron-goi_4.jpg" Width="91px" 
-                            Height="71px" />
-                    </td>
-                    <td>
-                        <div class="tour_content">
-                        <asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/TourTronGoi.aspx" style="text-decoration:none"><b>Gangnam Tour - Afternoon Tour $10,000</b></asp:HyperLink><br /><br />
-                        Ngày1: Đến sân bay quốc tế Incheon. Quý khách lên xe khởi hành vào Seoul dùng bữa sáng với thực đơn là các món mỳ truyền thống HànQuốc Udong.Xe đưa Quý khách đến Gimpo đáp chuyến bay nội địa ra đảo Jeju...</div>                        
-                    </td>
-                </tr>
+                <asp:Repeater ID="RepScen" runat="server">
+                    <ItemTemplate>
+                        <tr>
+                            <td>
+                                <a href='ChiTietDiaDiem.aspx?ScenId=<%# Eval("ScenId")%>'>
+                                    <img style="width:91px; height:71px" src='Images/site/Scenery/<%# Eval("PicPath1") %>' border="0"/>
+                                </a>
+                            </td>
+                            <td class="tour_content_nopadtop">
+                                <div style="width:633px">
+                                    <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl='<%#Eval("ScenId","ChiTietDiaDiem.aspx?ScenId={0}")%>' style="text-decoration:none"><b><%# Eval("ScenNm") %></b></asp:HyperLink><br /><br />
+                                    <%# Eval("DescReview") %>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="width: 500px">
+                            <td colspan="2">
+                                <img src="images/site/tourtrongoi_sper.jpg" width="745px" />
+                            </td>
+                        </tr>
+                    </ItemTemplate>
+                </asp:Repeater>
             </table>
+            <div style="width:771px" align="right">
+                <cc1:CollectionPager ID="CollectionPager1"
+                    FirstText="Đầu" 
+                    BackText="« Trước &amp;nbsp;" 
+                    LabelText="" 
+                    LastText="Cuối" 
+                    NextText="&amp;nbsp; Sau »" 
+                    ShowFirstLast="True" 
+                    SliderSize="5" PagingMode="PostBack"
+                    runat="server" BackNextLinkSeparator="" BackNextLocation="Split" 
+                    PageNumbersDisplay="Numbers" ResultsLocation="None" 
+                    BackNextDisplay="HyperLinks" ControlCssClass="tour_content_paging">
+                </cc1:CollectionPager>
+            </div>
         </td>
     </tr>
 </table>

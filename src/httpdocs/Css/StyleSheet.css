@@ -60,6 +60,7 @@ a
     font-weight:bold;
     text-decoration: none;
     vertical-align:bottom;
+    cursor:pointer;
 }
 .tbl_menu td:hover
 {
@@ -147,6 +148,39 @@ body
 	padding-left: 10px;
 	text-decoration: none;
 }
+.tour_content_nb
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:11px;
+    color: #0453a8;
+    text-align:justify;
+	padding-right: 15px;
+	padding-top: 10px;
+	text-decoration: none;
+}
+.tour_content_nopadtop
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:11px;
+    color: #0453a8;
+    text-align:justify;
+	padding-right: 15px;
+	padding-left: 10px;
+	text-decoration: none;
+	vertical-align:top;
+}
+.tour_content_nopadtop a
+{
+    color: #0453a8;
+    text-decoration: none;
+}
+.tour_content_paging
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #808080;
+    text-decoration: none;
+}
 .lbl_tour_cre
 {
     font-family: Arial, Helvetica, sans-serif;
@@ -231,4 +265,13 @@ body
     color:#ffffff;
     font-weight:bold;
     text-decoration: none;
+}
+/*Event*/
+.event_title
+{
+    color: #0453a8;
+}
+.event_title:hover
+{
+    color: #3391f6;
 }
